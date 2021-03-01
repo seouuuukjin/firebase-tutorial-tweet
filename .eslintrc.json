@@ -19,5 +19,9 @@
         "react"
     ],
     "rules": {
+        "no-unused-vars": ["off"],
+        // 사용하지 않는 변수가 있을때 빌드에러가 나던 규칙 해제
+        "react/prop-types": ["off"]
+        // props의 타입체크를 처리하려면 prop-types보단 차라리 typescript를 사용하는게 낫다.
     }
 }
