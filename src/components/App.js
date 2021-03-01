@@ -1,9 +1,12 @@
 import React, {useState} from "react";
 import AppRouter from "./Router";
 import firebase from "../firebaseInstance";
+import firebaseInstance from "../firebaseInstance";
+import { authservice } from "firebaseInstance";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIm] = useState(true); // eslint-disable-line no-unused-vars
+  console.log(authservice.currentUser)
+  const [isLoggedIn, setIsLoggedIm] = useState(authservice.currentUser); // eslint-disable-line no-unused-vars
   return (
     <>
       <AppRouter isLoggedIn={isLoggedIn} />
